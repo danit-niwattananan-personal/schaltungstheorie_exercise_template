@@ -1,0 +1,133 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{amsmath}
+\usepackage{scrlayer-scrpage}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage[export]{adjustbox}
+\usepackage{array}
+\makeatletter
+\newcommand*{\rom}[1]{\expandafter\@slowromancap\romannumeral #1@}
+\makeatother
+\usepackage[european,straightvoltages]{circuitikz}
+\usepackage[locale=DE]{siunitx}
+\usepackage[ngerman]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{tikz}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{blindtext}
+\usepackage{multicol}
+\setlength{\columnsep}{1cm}
+\def\mathbi#1{\textbf{\em #1}}
+\usepackage{graphicx}
+
+\geometry{
+	a4paper,
+	total={170mm,257mm},
+	left=25mm,
+	right = 25mm,
+	bottom= 25mm,
+	top = 40mm
+}
+
+\begin{document}
+	\ihead{Schaltungstheorie Tutorübung WS 2022/23\\ 7.Tutorium am 14.12.2022}
+	\ohead{Danit Niwattananan\\  dummyemail@tum.de}
+	\setheadsepline{.5pt}
+	\cfoot{\pagemark}
+	\section*{Aufgabe 1: Resistiver Eintor}
+
+    Gegeben sei folgende Schaltung:
+    \begin{figure}[ht]
+		\centering
+
+        \begin{circuitikz}
+            %allg. Eintor F
+            \draw(-4, 3) to [ageneric = $\mathcal{F}$, v> = $u_\mathcal{F}$, i>= $i_\mathcal{F}$, o-o](-4, 0);
+            
+            \draw(-2,1.5) node{$\equiv$};
+        
+            %Spannungsquelle
+            \draw(0,0) to [V<= $u_0$](0, 3);
+    
+            %R und Diode
+            \draw(3, 3) to [R = $R_1$, o-](0, 3);
+            \draw (0,0) to[D, l=$D_1$, -o] (3,0); 
+            
+            % Pfeile
+            \draw(2.5,0) to [short, i>= $i_{\mathcal{F}}$](2,0);
+            \draw(3,0) to [open, v<= $u_{\mathcal{F}}$](3,3);
+        \end{circuitikz}
+    \end{figure}
+
+Die Diode arbeitet im Sperrbereich.
+
+    \begin{itemize}
+        \item[a)] Zeichnen Sie ....
+        \item[b)] Berechnen Sie $u_{\mathcal{F}}$ in Abhängigkeit von ....
+    \end{itemize}
+    Nun arbeitet die Diode im Durchlassbereich.
+    \begin{itemize}
+        \item[c)] Geben Sie $u_0$, in Abhängigkeit von ... an.
+        \item[d)] Warum ist es so?
+    \end{itemize}
+    Es gelten folgende Bauteilwerte: $R_1 = 5 k \Omega$
+
+    \begin{figure}[ht]
+    \centering
+    \begin{tikzpicture}
+    \draw[step=0.5cm,gray,very thin] (-3.4,-3.4) grid (3.4,3.4);
+    \draw[thick,->] (-3.4,0) -- (3.7,0) node[anchor=north west] {$\frac{u_{\mathcal{F}}}{V}$};
+    \draw[thick,->] (0,-3.4) -- (0,3.7) node[anchor=south east] {$\frac{i_{\mathcal{F}}}{A}$};
+    \end{tikzpicture}
+    \end{figure}
+
+    \begin{itemize}
+        \item[e)] Zeichnen Sie das $u_{\mathcal{F}}$-$i_{\mathcal{F}}$-Diagramm.
+    \end{itemize}
+
+    \newpage
+    
+    \section*{Aufgabe 2: Never Gonna Give You Up}
+    Gegeben sei folgende Zweitor.
+    \begin{figure}[ht]
+        \centering
+        \includegraphics{your_circuit.pdf}
+    \end{figure}
+
+Der Zweitor kann durch folgende Gleichung beschrieben werden.
+    \begin{equation*}
+    \begin{bmatrix}
+    1A & 2A\\
+    3A & 4A
+    \end{bmatrix} \mathbf{u} +
+    \begin{bmatrix}
+    5V & 6V\\
+    7V & 8V
+    \end{bmatrix}  \mathbf{i} = \textbf{0}
+    \end{equation*}
+    \begin{itemize}
+        \item[a)] Never gonna let you down
+        \item[b)] Never gonna run around
+        \item[c)] and desert you
+        \item[d)] Welche Eigenschaften besitzen die Netzwerkelemente
+    \end{itemize}
+
+    \begin{center}
+    \begin{tabular}{ | c | m{.5cm}| m{.51cm} | m{.5cm}| } 
+      \hline
+      & $\mathcal{F}_1$ & $\mathcal{F}_{2}$ & $\mathcal{F}_{3}$ \\
+      \hline
+      spannungsgesteuert & & &  \\ 
+      \hline
+      stromgesteuert & & &  \\ 
+      \hline
+      attribute3 & & &  \\ 
+      \hline
+      attribute4 & & &  \\ 
+      \hline
+    \end{tabular}
+    \end{center}
+    \textit{Du schaffst es! Viel Erfolg!}
+\end{document}
