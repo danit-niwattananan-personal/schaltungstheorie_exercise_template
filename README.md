@@ -88,7 +88,7 @@ The third line then create a line of thickness 0.5 point after the headers, whil
             \includegraphics{your_circuit.pdf}
         \end{figure}
         ```
-    - And Voila, you should see it when you recompile your `main.tex`. If it fails, you will see a square with the specified file name there instead. In that case, check your file name carefully.
+    - And Voila, you should see it when you recompile your `main.tex`. If it fails, you will see a square with the specified file name there instead. In that case, check your file name carefully, and check whether your file exists.
 2. **The hard way** - Kudos to you who want to draw it by yourself. I have to warn you that this requires you to draw every single line manually with LaTeX code, so it will take quite a long time. Here are the steps:
     - Add this block of code to the place you want to have your picture (don't forget to add `\usepackage{tikz}` and `\usepackage[european,straightvoltages]{circuitikz}` to your `main.tex` for this to work)
     ```latex
