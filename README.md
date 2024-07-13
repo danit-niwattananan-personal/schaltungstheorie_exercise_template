@@ -283,7 +283,7 @@ That was pretty much it. Now you can create most of the exercise sheets that you
 If this will be your first time, I warn you that the first tutorial is going to decide if the students will attend your classes or not, so prepare well, and upload the Formelsammlung and exercise sheets in well-time manner (at least 1 week before your class). There is nothing more demotivating than poor preparation that leads to nobody attending your class. Anxiety is normal, but it will be gone after 2-3 classes. I wish best of luck to all of you and have fun tutoring others :)
 
 ## Acknowledgement
-Thank you Yichen Zhang (@spacezhang) for his help with setting up formatting and various LaTeX suggestions. 
+Thank you Yichen Zhang (@NoMoreNameToUse) for his help with setting up formatting and various LaTeX suggestions. 
 
 ## License
 This guide and source code is released under the [MIT](LICENSE) License.
